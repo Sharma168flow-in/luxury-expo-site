@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAAST Style Gala & Expo 2026 | Luxury Exhibition</title>
+    <style>
+        :root {
+            --bg-color: #0b0c10;
+            --card-bg: #1f2833;
+            --gold: #d4af37;
+            --gold-hover: #f3e5ab;
+            --text-light: #ffffff;
+            --text-muted: #c5c6c7;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Playfair Display', 'Didot', 'Georgia', serif; }
+        body { background-color: var(--bg-color); color: var(--text-light); line-height: 1.6; }
+        header { display: flex; justify-content: space-between; align-items: center; padding: 20px 5%; border-bottom: 1px solid rgba(212, 175, 55, 0.2); background: rgba(11, 12, 16, 0.95); position: sticky; top: 0; z-index: 100; }
+        .logo { font-size: 24px; font-weight: bold; color: var(--gold); letter-spacing: 2px; text-decoration: none; }
+        nav a { color: var(--text-muted); text-decoration: none; margin-left: 20px; font-size: 14px; transition: 0.3s; text-transform: uppercase; letter-spacing: 1px; }
+        nav a:hover { color: var(--gold); }
+        .hero { text-align: center; padding: 100px 5% 60px 5%; max-width: 900px; margin: 0 auto; }
+        .hero h1 { font-size: 32px; color: var(--gold); letter-spacing: 3px; line-height: 1.3; margin-bottom: 20px; text-transform: uppercase; }
+        .hero p { font-size: 18px; color: var(--text-muted); margin-bottom: 30px; font-style: italic; }
+        .cta-buttons { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
+        .btn { background: transparent; border: 2px solid var(--gold); color: var(--gold); padding: 12px 30px; font-size: 14px; text-transform: uppercase; font-weight: bold; cursor: pointer; transition: 0.4s; letter-spacing: 1px; text-decoration: none; }
+        .btn.solid { background: var(--gold); color: var(--bg-color); }
+        .btn:hover { background: var(--gold); color: var(--bg-color); box-shadow: 0 0 15px rgba(212, 175, 55, 0.4); }
+        .details-card { background: var(--card-bg); border: 1px solid var(--gold); max-width: 600px; margin: 40px auto; padding: 30px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .details-grid { display: flex; justify-content: space-around; flex-wrap: wrap; gap: 20px; }
+        .detail-item h3 { color: var(--gold); font-size: 14px; text-transform: uppercase; margin-bottom: 5px; }
+        .detail-item p { font-size: 16px; }
+        .grid-section { padding: 60px 5%; max-width: 1200px; margin: 0 auto; text-align: center; }
+        .section-title { font-size: 28px; color: var(--gold); margin-bottom: 40px; text-transform: uppercase; letter-spacing: 2px; }
+        .passes-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 40px; }
+        .pass-box { background: rgba(31, 40, 51, 0.6); border: 1px solid rgba(212, 175, 55, 0.3); padding: 25px 20px; text-align: left; transition: 0.3s; }
+        .pass-box.elite { border: 2px solid var(--gold); background: linear-gradient(145deg, #1f2833, #0b0c10); box-shadow: 0 0 15px rgba(212, 175, 55, 0.2); }
+        .pass-box h3 { color: var(--gold); font-size: 18px; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; border-bottom: 1px solid rgba(212, 175, 55, 0.2); padding-bottom: 8px; }
+        .pass-box ul { list-style: none; }
+        .pass-box ul li { color: var(--text-muted); font-size: 13px; margin-bottom: 8px; position: relative; padding-left: 15px; }
+        .pass-box ul li::before { content: "★"; color: var(--gold); position: absolute; left: 0; font-size: 10px; top: 2px; }
+        .form-section { padding: 40px 5%; max-width: 650px; margin: 0 auto; }
+        .form-container { background: var(--card-bg); border-top: 3px solid var(--gold); padding: 40px 30px; box-shadow: 0 15px 40px rgba(0,0,0,0.6); }
+        .form-container h2 { font-size: 24px; color: var(--gold); text-align: center; margin-bottom: 25px; text-transform: uppercase; }
+        .form-group { margin-bottom: 20px; text-align: left; }
+        .form-group label { display: block; font-size: 12px; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; letter-spacing: 1px; }
+        .form-group input, .form-group select { width: 100%; padding: 12px; background: rgba(11, 12, 16, 0.8); border: 1px solid rgba(212, 175, 55, 0.3); color: var(--text-light); font-size: 15px; }
+        .form-group input:focus, .form-group select:focus { border-color: var(--gold); outline: none; }
+        .form-submit { width: 100%; background: var(--gold); color: var(--bg-color); padding: 14px; border: none; font-size: 16px; font-weight: bold; text-transform: uppercase; cursor: pointer; transition: 0.3s; letter-spacing: 1px; }
+        .form-submit:hover { background: var(--gold-hover); box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3); }
+        .referral-msg { font-size: 13px; color: #5cb85c; margin-top: 8px; font-weight: bold; display: none; text-align: center; letter-spacing: 0.5px; }
+        footer { background: #000; text-align: center; padding: 40px 5%; border-top: 1px solid rgba(212, 175, 55, 0.2); }
+        .footer-banners { font-size: 13px; color: var(--gold); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 20px; }
+        .footer-contact { font-size: 15px; color: var(--text-muted); margin-bottom: 20px; }
+        .footer-contact p { margin: 5px 0; }
+        .footer-logo { font-size: 16px; font-weight: bold; color: var(--gold); letter-spacing: 1px; }
+        @media (max-width: 600px) { .hero h1 { font-size: 26px; } .cta-buttons { flex-direction: column; } nav { display: none; } }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">FAAST STYLE</a>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#passes">Pass Categories</a>
+            <a href="#exhibit">Exhibit</a>
+            <a href="#register">Register</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="about">
+        <h1>FAAST Style Gala & Expo 2026</h1>
+        <p>Where Fashion, Business & Luxury Converge.<br>Bengaluru’s Premier Premium Luxury Fashion and Jewellery Event.</p>
+        <div class="cta-buttons">
+            <a href="#register" class="btn solid">Register For Passes</a>
+            <a href="#exhibit" class="btn">Book Exhibit Space</a>
+        </div>
+    </section>
+
+    <div class="details-card">
+        <div class="details-grid">
+            <div class="detail-item">
+                <h3>Venue</h3>
+                <p>The Lalit Ashok, Bengaluru</p>
+            </div>
+            <div class="detail-item">
+                <h3>Dates</h3>
+                <p>August 8th & 9th, 2026</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- CHOOSE YOUR PASS SECTION (PRICES CONCEALED) -->
+    <section class="grid-section" id="passes">
+        <h2 class="section-title">Choose Your Pass Tier</h2>
+        <div class="passes-grid">
+            <div class="pass-box">
+                <h3>General Pass</h3>
+                <ul>
+                    <li>Expo Access</li>
+                    <li>Access to 60+ Curated Brands</li>
+                    <li>Premium Shopping Experience</li>
+                </ul>
+            </div>
+            <div class="pass-box">
+                <h3>Premium Pass</h3>
+                <ul>
+                    <li>Fashion Show Access</li>
+                    <li>Expo Access</li>
+                    <li>Reserved Seating Selection</li>
+                    <li>Priority Entry Access</li>
+                </ul>
+            </div>
+            <div class="pass-box">
+                <h3>Couple Pass</h3>
+                <ul>
+                    <li>Entry for 2 Guests Together</li>
+                    <li>Fashion Show Access for 2</li>
+                    <li>Expo Access for 2</li>
+                    <li>Reserved Seating Access</li>
+                    <li>Access to 60+ Curated Brands</li>
+                    <li>Priority Couple Entry Lane</li>
+                </ul>
+            </div>
+            <div class="pass-box">
+                <h3>VIP Pass</h3>
+                <ul>
+                    <li>Exclusive VIP Zone Access</li>
+                    <li>Dedicated VIP Registration Counter</li>
+                    <li>Premium Fashion Show Access</li>
+                    <li>Expo Access Perks</li>
+                    <li>Priority Fast-Track Entry</li>
+                    <li>VIP Networking Access Lounge</li>
+                </ul>
+            </div>
+            <div class="pass-box elite">
+                <h3>Elite VVIP Pass</h3>
+                <ul>
+                    <li>Front Row Elite Runway Seating</li>
+                    <li>Luxury Lunch at The Lalit Ashok</li>
+                    <li>Exclusive VVIP Networking Access</li>
+                    <li>Reserved VVIP Lounge Area</li>
+                    <li>Priority Personal Registration</li>
+                    <li>All-Access Fashion Show & Expo Pass</li>
+                    <li>Premium Hospitality Experience</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORM 1: PASS REGISTRATION WITH REFERRAL ALERTS -->
+    <section class="form-section" id="register">
+        <div class="form-container">
+            <h2>Select Pass & Register</h2>
+            <form action="https://web3forms.com" method="POST">
+                <!-- IMPORTANT: Paste your Web3Forms access key below -->
+                <input type="hidden" name="access_key" value="452cad0f-4711-4f88-b889-689d89432922">
+                <input type="hidden" name="subject" value="🎟 NEW VIP PASS REGISTRATION 🎟">
+                <input type="hidden" name="from_name" value="FAAST Style Web Agent">
+
+                <div class="form-group">
+                    <label>Your Full Name</label>
+                    <input type="text" name="Attendee Name" required placeholder="Enter your name">
+                    
